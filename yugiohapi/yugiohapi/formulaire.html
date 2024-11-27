@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="styles3.css">
+</head>
+<body>
+    <div id="menu">
+        <a href="index.html" class="onglet">Accueil</a>
+        <button id="mode" class="onglet">DARKMODE</button>
+    </div>
+
+    <div class="formulaire">
+        <h1>Contactez-nous</h1>
+        <form id="formulaire" action="#" method="POST" novalidate>
+            <div class="champ">
+                <label for="pseudo">Pseudo :</label>
+                <input type="text" id="pseudo" name="pseudo" required>
+                <small id="erreur-pseudo" class="message-erreur"></small>
+            </div>
+            <div class="champ">
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required>
+                <small id="erreur-email" class="message-erreur"></small>
+            </div>
+            <div class="champ">
+                <label for="mdp">Mot de passe :</label>
+                <input type="password" id="mdp" name="mdp" 
+                       pattern="^(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,}$" 
+                       required>
+                <small id="erreur-mdp" class="message-erreur"></small>
+            </div>
+            <div class="champ">
+                <label for="message">Message :</label>
+                <textarea id="texte" name="texte" rows="5" required></textarea>
+            </div>
+            <button type="submit">Envoyer</button>
+        </form>
+    </div>
+
+    <script src="script4.js"></script>
+</body>
+</html>
