@@ -1,0 +1,123 @@
+.formulaire {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.formulaire h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.champ {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+.message-erreur {
+    color: red;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 5px;
+    display: none; 
+}
+
+.erreur-flash {
+    animation: flash 1s infinite alternate;
+}
+
+@keyframes flash {
+    0% {
+        color: red;
+        text-shadow: 0 0 5px red;
+    }
+    100% {
+        color: orange;
+        text-shadow: 0 0 10px orange;
+    }
+}
+
+#menu {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.onglet {
+    text-decoration: none;
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    display: inline-block;
+}
+
+.onglet:hover {
+    background-color: #555;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark-mode .formulaire {
+    background-color: #333;
+    color: #fff;
+}
+
+body.dark-mode .onglet {
+    background-color: #555;
+}
+
+body.dark-mode button {
+    background-color: #444;
+}
+
+body.dark-mode .message-erreur {
+    color: #ff6f61;
+}
